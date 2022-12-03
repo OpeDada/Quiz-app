@@ -34,3 +34,21 @@ let questions = [
     answer: 4,
   },
 ];
+
+//CONSTANTS
+
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 3;
+
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuestions = [...questions]; // this stands for a copy of the questions array
+  getNewQuestion();
+};
+
+getNewQuestion = () => {
+  questionCounter++;
+};
+
+startGame();
