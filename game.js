@@ -5,7 +5,7 @@ let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableQuesions = [];
+let availableQuestions = [];
 
 let questions = [
   {
@@ -49,6 +49,9 @@ startGame = () => {
 
 getNewQuestion = () => {
   questionCounter++;
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+  currentQuestion = availableQuestions[questionIndex];
+  question.innerText = currentQuestion.question;
 };
 
 startGame();
