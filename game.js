@@ -57,6 +57,16 @@ getNewQuestion = () => {
     const number = choice.dataset["number"]
     choice.innerText = currentQuestion["choice" + number]
   })
+
+  availableQuestions.splice(questionIndex, 1) //get rid of questions that has been used
+
+  acceptingAnswers = true
 };
+
+choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    
+  })
+})
 
 startGame();
