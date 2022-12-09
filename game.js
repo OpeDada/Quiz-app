@@ -75,9 +75,11 @@ choices.forEach((choice) => {
     const selectedAnswer = selectedChoice.dataset["number"];
 
     const classToApply =
-      selectedAnswer === currentQuestion.answer ? "correct" : "incorrect";
+      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
     selectedChoice.parentElement.classList.add(classToApply);
+
+    // selectedChoice.parentElement.classList.remove(classToApply);
 
     getNewQuestion();
   });
