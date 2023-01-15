@@ -54,7 +54,7 @@ getNewQuestion = () => {
     return window.location.assign("/end.html");
   }
   questionCounter++;
-  questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
+  questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
 
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
