@@ -1,3 +1,3 @@
-saveHighScore = e => {
-
-}
+saveHighScore = (e) => {
+  e.preventDefault();
+};
