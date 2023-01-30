@@ -19,4 +19,6 @@ saveHighScore = (e) => {
     name: username.value,
   };
   highScores.push(score)
+
+  highScores.sort( (a,b) => b.score - a.score)
 };
