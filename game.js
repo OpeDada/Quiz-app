@@ -18,6 +18,9 @@ fetch("questions.json").then((res) => {
   questions = loadedQuestions
   startGame();
 })
+.catch(err => {
+  console.log(err)
+})
 ;
 
 //CONSTANTS
