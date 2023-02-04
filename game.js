@@ -18,9 +18,15 @@ fetch(
     return res.json();
   })
   .then((loadedQuestions) => {
-    questions = loadedQuestions;
-    startGame();
+    loadedQuestions.results.map(loadedQuestion => {
+    const formattedQuestion = {
+      question: loadedQuestions.questions
+    }
+    // questions = loadedQuestions;
+    // startGame();
   })
+
+})
   .catch((err) => {
     console.log(err);
   });
