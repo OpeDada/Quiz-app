@@ -11,17 +11,19 @@ let availableQuestions = [];
 
 let questions = [];
 
-fetch("questions.json").then((res) => {
-  return res.json()
-})
-.then(loadedQuestions => {
-  questions = loadedQuestions
-  startGame();
-})
-.catch(err => {
-  console.log(err)
-})
-;
+fetch(
+  'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
+)
+  .then((res) => {
+    return res.json();
+  })
+  .then((loadedQuestions) => {
+    questions = loadedQuestions;
+    startGame();
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 //CONSTANTS
 
